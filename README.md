@@ -6,6 +6,7 @@ Nævneværdige features:
 * Search-as-you-type med debounced kald til REST-API'et
 * Thumbnails hentes ud - også til artikler med video-thumbnails
 * Hvis man scroller til bunden af resultaterne kan man hente flere resultater
+* Man kan filtrere på geografisk område
 * Det benytter Quasar komponent-frameworket, som var nyt for mig – det virker solidt
 
 Live demo: [https://rasmusfrederiksen.dk/tv2reg](https://rasmusfrederiksen.dk/tv2reg)
