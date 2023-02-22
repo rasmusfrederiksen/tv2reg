@@ -8,6 +8,8 @@ Nævneværdige features:
 * Hvis man scroller til bunden af resultaterne kan man hente flere resultater
 * Det benytter Quasar komponent-frameworket, som var nyt for mig – det virker solidt
 
+Live demo: [https://rasmusfrederiksen.dk/tv2reg](https://rasmusfrederiksen.dk/tv2reg)
+
 ## Install the dependencies
 ```bash
 yarn
