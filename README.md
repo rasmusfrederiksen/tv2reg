@@ -1,6 +1,12 @@
-# Article Search (article-search)
+# Artikelsøgning
 
-A Quasar Project
+En hurtig demo af et interface til at fremsøge artikler fra TV 2 Kosmopol.
+
+Nævneværdige features:
+* Search-as-you-type med debounced kald til REST-API'et
+* Thumbnails hentes ud - også til artikler med video-thumbnails
+* Hvis man scroller til bunden af resultaterne kan man hente flere resultater
+* Det benytter Quasar komponent-frameworket, som var nyt for mig – det virker solidt
 
 ## Install the dependencies
 ```bash
@@ -13,7 +19,6 @@ npm install
 ```bash
 quasar dev
 ```
-
 
 ### Lint the files
 ```bash
