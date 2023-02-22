@@ -5,7 +5,6 @@
       <SearchField v-model="searchQuery" label="Søg efter artikler" class="search q-pr-sm"/>
       <LocationSelect v-model="location"/>
     </div>
-    {{ location.value }}
     <ArticleList :url="searchUrl" />
   </q-page>
 </template>
