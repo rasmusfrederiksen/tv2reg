@@ -1,9 +1,9 @@
 <template>
   <q-page class="flex column flex-center">
-    <div class="text-h3 q-pa-lg">Artikelsøgning</div>
+    <div class="text-h4 q-pa-lg">Artikelsøgning</div>
     <div class="flex row hundred justify-center">
-      <SearchField v-model="searchQuery" label="Søg efter artikler" class="search q-pr-sm"/>
-      <LocationSelect v-model="location"/>
+      <SearchField v-model="searchQuery" label="Søg efter artikler" class="search q-mx-xs q-mb-xs"/>
+      <LocationSelect v-model="location" class="q-mx-xs"/>
     </div>
     <ArticleList :url="searchUrl" />
   </q-page>
@@ -14,8 +14,9 @@
     width: 100%;
   }
   .search {
-    width: calc(100% - 120px);
+    width: calc(100% - 210px);
     max-width: 400px;
+    min-width: 200px;
   }
 </style>
 
