@@ -44,8 +44,6 @@
         this.locations = this.locations.concat(p);
       });
     },
-    methods: {
-    },
     emits: ['update:modelValue']
   });
 </script>

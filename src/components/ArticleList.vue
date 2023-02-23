@@ -67,13 +67,14 @@
       }
     },
     created () {
-      this.getArticles = (newUrl) => {
-        if (newUrl === '') {
+      this.getArticles = (url) => {
+        if (url === '') {
           this.articles = [];
+          this.nextPageUrl = '';
           this.loading = false;
           return;
         }
-        fetch(newUrl)
+        fetch(url)
         .then((response) => response.json())
         .then((data) => {
           this.nextPageUrl = data.links.next || '';
@@ -97,4 +98,5 @@
       }
     }
   });
+
 </script>

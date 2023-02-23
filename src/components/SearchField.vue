@@ -30,7 +30,6 @@
     },
     methods: {
       clear () {
-        console.log('clear');
         this.searchQuery = '';
         this.$emit('update:modelValue', this.searchQuery);
         this.$refs.qinput.focus();

@@ -26,6 +26,8 @@
   import LocationSelect from 'components/LocationSelect.vue';
   import ArticleList from 'components/ArticleList.vue';
 
+  const apiBaseUrl = 'https://public.lorry.bazo.dk/v1/articles';
+
   export default defineComponent({
     name: 'ArticleSearchPage',
     components: {
@@ -40,21 +42,17 @@
       }
     },
     computed: {
-      locationFilterString () {
-        let uuid = (this.location?.value || '');
-        return `${uuid.length > 0 ? 'filter[location_uuid]=' : ''}${uuid}`;
-      },
-      searchFilterString () {
-        return `${this.searchQuery.length > 0 ? 'filter[title]=' : ''}${this.searchQuery}`;
-      },
-      filters () {
-        return `?${this.locationFilterString}&${this.searchFilterString}`
+      locationUUID () {
+        return (this.location?.value || '');
       },
       searchUrl () {
         if (this.searchQuery.length === 0) {
           return '';
         } else {
-          return `https://public.lorry.bazo.dk/v1/articles${this.filters}`;
+          const articlesUrl = new URL(apiBaseUrl);
+          if (this.searchQuery.length > 0) articlesUrl.searchParams.append("filter[title]", this.searchQuery);
+          if (this.locationUUID.length > 0) articlesUrl.searchParams.append("filter[location_uuid]", this.locationUUID);
+          return articlesUrl.href;
         }
       }
     }
